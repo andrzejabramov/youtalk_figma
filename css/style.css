@@ -1,0 +1,465 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- БАЗОВЫЕ СТИЛИ (только структура) ---------- */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 1280px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+
+/* ---------- ШАПКА ---------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white; /* заменишь из Figma */
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+@media (min-width: 1280px) {
+    .header__container {
+        padding: 20px 40px;
+    }
+}
+
+/* Логотип */
+.logo img {
+    width: auto;
+    height: 40px;
+}
+
+/* Навигация */
+.nav__list {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Кнопка */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;  /* заменишь из Figma */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button--primary {
+    background: transparent; /* цвет добавишь */
+}
+
+/* Бургер */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.burger__line {
+    width: 25px;
+    height: 3px;
+    background: currentColor;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 99;
+}
+
+.mobile-menu--open {
+    display: block;
+}
+
+.mobile-menu__list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.mobile-menu__link {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-menu__button {
+    width: 100%;
+}
+
+/* Адаптив шапки */
+@media (max-width: 1023px) {
+    .header__nav,
+    .header__button {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* ---------- ХЛЕБНЫЕ КРОШКИ ---------- */
+.breadcrumbs {
+    padding: 20px 0 16px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: "/";
+    margin-left: 8px;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+}
+
+/* ---------- БЛОГ ---------- */
+.blog {
+    padding: 20px 0 60px;
+}
+
+.blog__title {
+    font-size: 48px;  /* заменишь из Figma */
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .blog__title {
+        font-size: 32px;
+    }
+}
+
+/* Фильтры */
+.blog__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.filter {
+    padding: 10px 24px;
+    border-radius: 30px;  /* заменишь из Figma */
+    background: transparent;
+    border: 1px solid transparent;  /* толщину и цвет добавишь */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filter--featured {
+    border-width: 2px;
+}
+
+@media (max-width: 768px) {
+    .blog__filters {
+        gap: 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+    }
+    .filter {
+        white-space: nowrap;
+    }
+}
+
+/* ---------- ГЛАВНОЕ: СЕТКА КАРТОЧЕК ---------- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+/* Первые две карточки (первый ряд) занимают по 2 колонки? 
+   Нет — они должны быть по 1/2 ширины, а у нас 3 колонки.
+   Поэтому переопределяем для первых двух карточек: */
+.cards-grid .card:first-child,
+.cards-grid .card:nth-child(2) {
+    grid-column: span 1.5;  /* каждая занимает 1.5 колонки из 3 = половина */
+}
+
+/* На планшете меняем логику */
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-grid .card:first-child,
+    .cards-grid .card:nth-child(2) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .cards-grid .card:first-child,
+    .cards-grid .card:nth-child(2) {
+        grid-column: span 1;
+    }
+}
+
+/* Карточка */
+.card {
+    background: white;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 20px 0 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;  /* заменишь */
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    width: fit-content;
+}
+
+.card__title {
+    font-size: 20px;  /* заменишь */
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.card__date {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.card__link {
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+/* Кнопка "Еще" */
+.blog__footer {
+    text-align: center;
+}
+
+/* ---------- ФУТЕР ---------- */
+.footer {
+    margin-top: 60px;
+    background: transparent; /* цвет добавишь */
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: auto auto 1fr 1fr;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+@media (max-width: 1024px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+}
+
+.footer__list {
+    list-style: none;
+}
+
+.footer__link {
+    text-decoration: none;
+    line-height: 2;
+}
+
+/* Форма подписки */
+.subscribe__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.subscribe__form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.subscribe__input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.subscribe__button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.subscribe__agreement {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Колонка 4: бренд и соцсети */
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer__logo {
+    height: 40px;
+    width: auto;
+}
+
+.footer__badge {
+    font-weight: 700;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.socials__link {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer__brand {
+        justify-content: center;
+    }
+    .socials {
+        justify-content: center;
+    }
+}
+
+/* Разделитель */
+.footer__separator {
+    height: 1px;
+    background: currentColor;
+    opacity: 0.2;
+    margin: 0 0 20px 0;
+}
+
+/* Нижняя строка */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 40px;
+    font-size: 14px;
+}
+
+.footer__legal {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

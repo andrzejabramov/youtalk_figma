@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU TALK — Блог о психологии</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="container header__container">
+            <!-- Логотип -->
+            <a href="/" class="logo header__logo">
+                <img src="images/logo.svg" alt="YOU TALK" width="120" height="40">
+            </a>
+
+            <!-- Десктопная навигация (показывается на экранах >= 1024px) -->
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Тарифы</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Для бизнеса</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Психологам</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Сертификат</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#" class="nav__link">Материалы</a>
+                    </li>
+                    <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Кнопка -->
+            <button class="button button--primary header__button">Подобрать психолога</button>
+
+            <!-- Бургер-кнопка (показывается на экранах < 1024px) -->
+            <button class="burger header__burger" aria-label="Открыть меню" aria-expanded="false">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+
+        <!-- Мобильное меню (по умолчанию скрыто) -->
+        <div class="mobile-menu" data-mobile-menu>
+            <div class="container">
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li><a href="#" class="mobile-menu__link">О нас</a></li>
+                        <li><a href="#" class="mobile-menu__link">Тарифы</a></li>
+                        <li><a href="#" class="mobile-menu__link">Для бизнеса</a></li>
+                        <li><a href="#" class="mobile-menu__link">Психологам</a></li>
+                        <li><a href="#" class="mobile-menu__link">Сертификат</a></li>
+                        <li><a href="#" class="mobile-menu__link">Материалы</a></li>
+                        <li><a href="#" class="mobile-menu__link">FAQ</a></li>
+                    </ul>
+                </nav>
+                <button class="button button--primary mobile-menu__button">Подобрать психолога</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+    <main class="main">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">Блог</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Блог -->
+        <section class="blog">
+            <div class="container">
+                <h1 class="blog__title">Блог</h1>
+
+                <!-- Фильтры / теги -->
+                <div class="blog__filters">
+                    <button class="filter filter--active">😊 Все</button>
+                    <button class="filter">Самооценка и самопринятие</button>
+                    <button class="filter filter--featured">Self</button>
+                    <button class="filter">Чувства и эмоции</button>
+                    <button class="filter">Тревога</button>
+                    <button class="filter">Упражнения</button>
+                    <button class="filter">Психология питания</button>
+                    <button class="filter">Насилие</button>
+                    <button class="filter">Личное здоровье</button>
+                </div>
+
+                <!-- Сетка карточек с разным количеством колонок -->
+                <div class="cards-grid">
+                    
+                    <!-- Первый ряд: 2 карточки, занимают по 1/2 ширины -->
+                    <article class="card card--large">
+                        <img src="images/article-1.png" alt="Эмоциональные качели" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Самооценка и самопринятие</span>
+                            <h2 class="card__title">Эмоциональные качели: как справляться с перепадами настроения</h2>
+                            <time class="card__date" datetime="2025-03-20">20 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="card card--large">
+                        <img src="images/article-2.png" alt="Как не выгореть" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Self</span>
+                            <h2 class="card__title">Как не выгореть на работе: 5 проверенных стратегий</h2>
+                            <time class="card__date" datetime="2025-03-18">18 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Второй ряд: 3 карточки -->
+                    <article class="card">
+                        <img src="images/article-3.png" alt="Осознанное питание" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Психология питания</span>
+                            <h2 class="card__title">Осознанное питание: как перестать есть на автомате</h2>
+                            <time class="card__date" datetime="2025-03-15">15 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/article-4.png" alt="Справляемся с тревогой" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Тревога</span>
+                            <h2 class="card__title">Справляемся с тревогой: дыхательные техники и не только</h2>
+                            <time class="card__date" datetime="2025-03-12">12 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/article-5.png" alt="Личные границы" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Чувства и эмоции</span>
+                            <h2 class="card__title">Личные границы: как научиться говорить «нет» без чувства вины</h2>
+                            <time class="card__date" datetime="2025-03-10">10 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Третий ряд: 3 карточки -->
+                    <article class="card">
+                        <img src="images/article-6.png" alt="Упражнения для снятия стресса" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Упражнения</span>
+                            <h2 class="card__title">5 простых упражнений для снятия стресса за 5 минут</h2>
+                            <time class="card__date" datetime="2025-03-07">7 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/article-7.png" alt="Как полюбить себя" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Самооценка и самопринятие</span>
+                            <h2 class="card__title">Как полюбить себя: практики для повышения самооценки</h2>
+                            <time class="card__date" datetime="2025-03-05">5 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/article-8.png" alt="Сон и психика" class="card__image">
+                        <div class="card__content">
+                            <span class="card__category">Личное здоровье</span>
+                            <h2 class="card__title">Сон и психика: как наладить режим для эмоционального баланса</h2>
+                            <time class="card__date" datetime="2025-03-02">2 марта 2025</time>
+                            <a href="article.html" class="card__link">Читать далее →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Кнопка "Еще" -->
+                <div class="blog__footer">
+                    <button class="button button--primary">Еще</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Колонка 1: ссылки -->
+                <div class="footer__col footer__col--narrow">
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">О нас</a></li>
+                        <li><a href="#" class="footer__link">Тарифы</a></li>
+                        <li><a href="#" class="footer__link">Для бизнеса</a></li>
+                        <li><a href="#" class="footer__link">Психологам</a></li>
+                        <li><a href="#" class="footer__link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 2: ссылки -->
+                <div class="footer__col footer__col--narrow">
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Блог</a></li>
+                        <li><a href="#" class="footer__link">Вебинары</a></li>
+                        <li><a href="#" class="footer__link">Подкаст</a></li>
+                        <li><a href="#" class="footer__link">Сертификат</a></li>
+                        <li><a href="#" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: форма подписки (широкая) -->
+                <div class="footer__col footer__col--wide">
+                    <div class="subscribe">
+                        <h3 class="subscribe__title">Одно письмо в неделю со свежими новостями и акциями</h3>
+                        <form class="subscribe__form">
+                            <input type="email" class="subscribe__input" placeholder="Ваш e-mail" aria-label="Email для подписки">
+                            <button type="submit" class="subscribe__button" aria-label="Подписаться">
+                                <!-- сюда потом вставишь SVG-иконку конверта -->
+                                ✉
+                            </button>
+                        </form>
+                        <p class="subscribe__agreement">
+                            Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ "О персональных данных", а также с Политикой конфиденциальности.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Колонка 4: логотип, иконки (широкая) -->
+                <div class="footer__col footer__col--wide">
+                    <div class="footer__brand">
+                        <img src="images/logo-footer.svg" alt="YOU TALK" class="footer__logo">
+                        <span class="footer__badge">Участник</span>
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="socials__link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="socials__link" aria-label="Telegram">TG</a>
+                        <a href="#" class="socials__link" aria-label="Instagram">IG</a>
+                        <a href="#" class="socials__link" aria-label="Дзен">DZ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тонкая линия -->
+            <div class="footer__separator"></div>
+
+            <!-- Нижняя строка -->
+            <div class="footer__bottom">
+                <span class="footer__copyright">© YOU TALK, 2018–2022</span>
+                <a href="#" class="footer__legal">Юридические документы</a>
+                <span class="footer__payment">Способы оплаты</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
