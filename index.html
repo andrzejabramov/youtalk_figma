@@ -7,37 +7,34 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- ШАПКА (временно скопируй сюда из components/header.html) -->
     <div data-include="components/header.html"></div>
 
     <main class="main">
-      <div class="container">
-        <div data-include="components/breadcrumbs.html"></div>
-
-        <h1 class="blog__title">Блог</h1>
-
-        <div data-include="components/filters.html"></div>
-      </div>
-
-      <!-- Декоративный градиентный фон (из Figma: top 401px, высота 672px) -->
       <div class="gradient-bg"></div>
 
       <div class="container">
-        <div class="cards-grid">
-          <!-- Первый ряд: 2 крупные карточки -->
-          <div data-include="components/card-large.html"></div>
-          <div data-include="components/card-large.html"></div>
+        <div data-include="components/breadcrumbs.html"></div>
+        <h1 class="blog__title">Блог</h1>
+        <div data-include="components/filters.html"></div>
+      </div>
 
-          <!-- Второй ряд: 3 обычные карточки -->
-          <div data-include="components/card.html"></div>
-          <div data-include="components/card.html"></div>
-          <div data-include="components/card.html"></div>
-
-          <!-- Третий ряд: 3 обычные карточки -->
-          <div data-include="components/card.html"></div>
-          <div data-include="components/card.html"></div>
-          <div data-include="components/card.html"></div>
+      <div class="container">
+        <!-- Контейнер для карточек (сюда JS будет добавлять карточки) -->
+        <div class="cards-grid" id="cardsGrid"></div>
+    
+        <!-- Заглушка, если карточек нет -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+          <div class="empty-state__content">
+            <span class="empty-state__text">Загрузите свою статью</span>
+            <button class="empty-state__close" aria-label="Закрыть">✕</button>
+          </div>
         </div>
-
+    
+        <div class="blog__footer">
+          <button class="button button--primary">Еще</button>
+        </div>
+      </div>
         <div class="blog__footer">
           <button class="button button--primary">Еще</button>
         </div>

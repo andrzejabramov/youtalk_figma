@@ -1,0 +1,100 @@
+/* ===== ШАПКА ===== */
+.header {
+  background: var(--color-white);
+  box-shadow: inset 0px -2px 0px #eff2f2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 60px;
+}
+
+.logo img {
+  width: 51px;
+  height: 36px;
+}
+
+/* Навигация */
+.nav__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text);
+}
+
+.nav__item--dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__arrow {
+  width: 14px;
+  height: 14px;
+  border-right: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: var(--color-white);
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.mobile-menu--open {
+  display: block;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.mobile-menu__button {
+  width: 100%;
+}

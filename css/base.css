@@ -1,0 +1,46 @@
+/* ===== БАЗОВЫЕ СТИЛИ И ПЕРЕМЕННЫЕ ===== */
+:root {
+  --color-primary: #35b3a9;
+  --color-primary-dark: #16c8bb;
+  --color-primary-light: #e3f5f5;
+  --color-text: #333333;
+  --color-text-light: #868686;
+  --color-text-secondary: #494949;
+  --color-text-muted: rgba(51, 51, 51, 0.7);
+  --color-bg-footer: #2963a3;
+  --color-border: #c1c5cd;
+  --color-border-light: #dedede;
+  --color-bg-gradient: #eff5fb;
+  --color-white: #ffffff;
+  --font-main: "Montserrat", sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}

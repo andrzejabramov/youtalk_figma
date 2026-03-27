@@ -1,0 +1,27 @@
+/* ===== АДАПТИВНОСТЬ (дополнительные правила) ===== */
+@media (max-width: 1023px) {
+  .nav,
+  .header__button {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Доступность */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
