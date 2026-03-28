@@ -8,14 +8,15 @@
 
 .footer__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: 111px 106px 486px 221px;
+  gap: 61px;
   padding-bottom: 40px;
 }
 
 @media (max-width: 1024px) {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 }
 
@@ -23,6 +24,7 @@
   .footer__grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 24px;
   }
 }
 
@@ -34,12 +36,18 @@
   text-decoration: none;
   color: var(--color-white);
   line-height: 2;
-  opacity: 0.7;
+  opacity: 0.9;
   transition: opacity 0.3s;
 }
 
 .footer__link:hover {
   opacity: 1;
+}
+
+.footer__col--nav .footer__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* Подписка */
@@ -82,10 +90,9 @@
   justify-content: center;
 }
 
-.subscribe__button svg {
+.subscribe__button img {
   width: 24px;
   height: 24px;
-  fill: var(--color-white);
 }
 
 .subscribe__agreement {
@@ -128,10 +135,9 @@
   transition: background 0.3s;
 }
 
-.socials__link svg {
+.socials__link img {
   width: 16px;
   height: 16px;
-  fill: #333333;
 }
 
 .socials__link:hover {

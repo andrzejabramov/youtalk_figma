@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- ШАПКА (временно скопируй сюда из components/header.html) -->
     <div data-include="components/header.html"></div>
 
     <main class="main">
@@ -20,21 +19,7 @@
       </div>
 
       <div class="container">
-        <!-- Контейнер для карточек (сюда JS будет добавлять карточки) -->
         <div class="cards-grid" id="cardsGrid"></div>
-    
-        <!-- Заглушка, если карточек нет -->
-        <div id="emptyState" class="empty-state" style="display: none;">
-          <div class="empty-state__content">
-            <span class="empty-state__text">Загрузите свою статью</span>
-            <button class="empty-state__close" aria-label="Закрыть">✕</button>
-          </div>
-        </div>
-    
-        <div class="blog__footer">
-          <button class="button button--primary">Еще</button>
-        </div>
-      </div>
         <div class="blog__footer">
           <button class="button button--primary">Еще</button>
         </div>
@@ -43,6 +28,72 @@
 
     <div data-include="components/footer.html"></div>
 
+    <!-- ШАБЛОНЫ КАРТОЧЕК -->
+    <template id="card-template">
+      <article class="card">
+        <div class="card__media">
+          <img src="images/{{image}}" alt="{{alt}}" class="card__image" />
+          <div class="card__badge card__badge--small">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badge}}</span>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2 class="card__title">{{title}}</h2>
+          <div class="card__meta">
+            <span class="card__author">{{author}}</span>
+          </div>
+          <p class="card__description">{{description}}</p>
+          <time class="card__date">{{date}}</time>
+          <a href="{{link}}" class="card__link">Читать далее →</a>
+        </div>
+      </article>
+    </template>
+
+    <template id="card-large-template">
+      <article class="card card--large">
+        <div class="card__media">
+          <img src="images/{{image}}" alt="{{alt}}" class="card__image" />
+          <div class="card__badge card__badge--large">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badgeLarge}}</span>
+          </div>
+          <div class="card__badge card__badge--small">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badgeSmall}}</span>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2 class="card__title">{{title}}</h2>
+          <div class="card__meta">
+            <span class="card__author">{{author}}</span>
+          </div>
+          <p class="card__description">{{description}}</p>
+          <time class="card__date">{{date}}</time>
+          <a href="{{link}}" class="card__link">Читать далее →</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="js/pagination.js"></script>
     <script src="js/include.js"></script>
     <script src="js/script.js"></script>
   </body>

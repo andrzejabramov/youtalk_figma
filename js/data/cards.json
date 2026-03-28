@@ -1,7 +1,6 @@
 {
   "cards": [
     {
-      "type": "large",
       "image": "article-large-1.png",
       "alt": "Эмоциональное выгорание",
       "badgeLarge": "Самооценка и самопринятие",
@@ -13,7 +12,6 @@
       "link": "article.html"
     },
     {
-      "type": "large",
       "image": "article-large-2.png",
       "alt": "Как не утонуть в тревоге",
       "badgeLarge": "Самооценка и самопринятие",
@@ -25,7 +23,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-1.png",
       "alt": "Как управлять эмоциями",
       "badge": "Self",
@@ -36,7 +33,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-2.png",
       "alt": "Как не утонуть в тревоге",
       "badge": "Self",
@@ -47,7 +43,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-3.png",
       "alt": "Эмоциональное выгорание",
       "badge": "Self",
@@ -58,7 +53,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-4.png",
       "alt": "Как управлять эмоциями",
       "badge": "Self",
@@ -69,7 +63,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-5.png",
       "alt": "Self и самооценка",
       "badge": "Self",
@@ -80,7 +73,6 @@
       "link": "article.html"
     },
     {
-      "type": "small",
       "image": "article-small-6.png",
       "alt": "Психология питания",
       "badge": "Психология питания",

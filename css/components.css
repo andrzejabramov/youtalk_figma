@@ -78,18 +78,28 @@
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 3px; /* базовое значение, будет переопределено JS */
   margin-bottom: 48px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
 
+/* На планшете и мобилке — горизонтальный скролл */
+@media (max-width: 1023px) {
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .filter {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
+  padding: 6px 8px; /* фиксированные отступы */
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: transparent;
@@ -124,7 +134,7 @@
 }
 
 /* Мобильная версия фильтров — скролл */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .filters {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -218,6 +228,7 @@
 .card__content {
   padding: 20px 16px;
   background: var(--color-white);
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border-light);
   border-top: none;
   flex-grow: 1;
@@ -274,4 +285,92 @@
   text-align: center;
   margin-top: 48px;
   margin-bottom: 60px;
+}
+
+/* Дополнения для css/components.css (добавить в конец файла) */
+
+/* ===== ЗАГЛУШКА ===== */
+.card--empty {
+  grid-column: span 1;
+  background: #f9f9f9;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card__content--empty {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card__empty-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.card__empty-close {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 18px;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .card--empty {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .card--empty {
+    min-height: 300px;
+  }
+  .card__empty-text {
+    font-size: 16px;
+  }
+}
+
+/* ===== ГРАДИЕНТ (динамический) ===== */
+.gradient-bg {
+  position: absolute;
+  top: var(--gradient-top, 0);
+  left: 0;
+  width: 100%;
+  height: var(--gradient-height, 672px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 41.95%, #ffffff 70.27%),
+    var(--color-bg-gradient);
+  z-index: 0;
+  pointer-events: none;
+  transition:
+    top 0.2s ease,
+    height 0.2s ease;
+}
+
+.main {
+  position: relative;
+}
+
+.main .container {
+  position: relative;
+  z-index: 1;
 }
