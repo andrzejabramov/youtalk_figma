@@ -1,0 +1,1953 @@
+################################################################################
+# WEB PROJECT DUMP
+# Generated: 2026-03-29 20:41:04
+# Root: /Users/andrejabramov/Desktop/Urban/youtalk_blog
+# Target: all
+# Output: /Users/andrejabramov/Desktop/Urban/youtalk_blog/parcing/web_project_dump_20260329_204104.txt
+################################################################################
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+.
+├── README.md
+├── article.html
+├── components
+│   ├── breadcrumbs.html
+│   ├── card-large-1.html
+│   ├── card-large-2.html
+│   ├── card-large.html
+│   ├── card.html
+│   ├── filters.html
+│   ├── footer.html
+│   └── header.html
+├── css
+│   ├── base.css
+│   ├── components.css
+│   ├── footer.css
+│   ├── header.css
+│   ├── layout.css
+│   ├── responsive.css
+│   └── style.css
+├── dump_web_project.py
+├── index.html
+└── js
+    ├── data
+    │   └── cards.json
+    ├── include.js
+    ├── pagination.js
+    └── script.js
+
+5 directories, 23 files
+
+
+
+================================================================================
+### FILE: components/breadcrumbs.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<div class="breadcrumbs">
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a href="/" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--current">Блог</li>
+  </ul>
+</div>
+
+================================================================================
+### END OF FILE: components/breadcrumbs.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/card-large-1.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<article class="card card--large">
+  <div class="card__media">
+    <img
+      src="images/article-large-1.png"
+      alt="Эмоциональное выгорание"
+      class="card__image"
+    />
+    <div class="card__badge card__badge--large">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Самооценка и самопринятие</span>
+    </div>
+    <div class="card__badge card__badge--small">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Self</span>
+    </div>
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      Эмоциональное выгорание – стадии и симптомы, методы восстановления и
+      профилактики
+    </h2>
+    <div class="card__meta">
+      <span class="card__author">Автор: Лиза Файнтух</span>
+    </div>
+    <p class="card__description">
+      Изначально термин «эмоциональное выгорание» появился в профессиональной
+      сфере и относился...
+    </p>
+    <time class="card__date" datetime="2021-08-21">21.08.2021</time>
+    <a href="article.html" class="card__link">Читать далее →</a>
+  </div>
+</article>
+
+================================================================================
+### END OF FILE: components/card-large-1.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/card-large-2.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<article class="card card--large">
+  <div class="card__media">
+    <img
+      src="images/article-large-2.png"
+      alt="Как не утонуть в тревоге"
+      class="card__image"
+    />
+    <div class="card__badge card__badge--large">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Самооценка и самопринятие</span>
+    </div>
+    <div class="card__badge card__badge--small">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Self</span>
+    </div>
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      Как не утонуть в тревоге и управлять своими страхами
+    </h2>
+    <div class="card__meta">
+      <span class="card__author">Автор: Екатерина Бельтюкова</span>
+    </div>
+    <p class="card__description">
+      Один из самых важных навыков, которые может дать работа с психотерапевтом
+      — умение в разных ситуациях по-разному обходиться со своими эмоциями...
+    </p>
+    <time class="card__date" datetime="2021-08-11">11.08.2021</time>
+    <a href="article.html" class="card__link">Читать далее →</a>
+  </div>
+</article>
+
+================================================================================
+### END OF FILE: components/card-large-2.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/card-large.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<article class="card card--large">
+  <div class="card__media">
+    <img
+      src="images/article-large-1.png"
+      alt="Эмоциональное выгорание"
+      class="card__image"
+    />
+    <div class="card__badge card__badge--large">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Самооценка и самопринятие</span>
+    </div>
+    <div class="card__badge card__badge--small">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Self</span>
+    </div>
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      Эмоциональное выгорание – стадии и симптомы, методы восстановления и
+      профилактики
+    </h2>
+    <div class="card__meta">
+      <span class="card__author">Автор: Лиза Файнтух</span>
+    </div>
+    <p class="card__description">
+      Изначально термин «эмоциональное профессиональной сфере и относился...
+    </p>
+    <time class="card__date" datetime="2021-08-21">21.08.2021</time>
+    <a href="article.html" class="card__link">Читать далее →</a>
+  </div>
+</article>
+
+================================================================================
+### END OF FILE: components/card-large.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/card.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<article class="card">
+  <div class="card__media">
+    <img
+      src="images/article-small-1.png"
+      alt="Как управлять эмоциями"
+      class="card__image"
+    />
+    <div class="card__badge card__badge--small">
+      <img
+        src="images/icon-unicorn.svg"
+        alt=""
+        class="card__badge-icon"
+        width="20"
+        height="20"
+      />
+      <span class="card__badge-text">Self</span>
+    </div>
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">Как управлять своими эмоциями: 8 шагов</h2>
+    <div class="card__meta">
+      <span class="card__author">Автор: Екатерина Бельтюкова</span>
+    </div>
+    <p class="card__description">
+      Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции.
+      Пришло время об этом написать!
+    </p>
+    <time class="card__date" datetime="2021-08-07">07.08.2021</time>
+    <a href="article.html" class="card__link">Читать далее →</a>
+  </div>
+</article>
+
+================================================================================
+### END OF FILE: components/card.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/filters.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<div class="filters">
+  <button class="filter">
+    <span class="filter__icon">😊</span>
+    <span class="filter__text">Все</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Самооценка и самопринятие</span>
+  </button>
+  <button class="filter filter--featured">
+    <span class="filter__icon">🦄</span>
+    <span class="filter__text">Self</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Чувства и эмоции</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Тревога</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Упражнения</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Психология питания</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Насилие</span>
+  </button>
+  <button class="filter">
+    <span class="filter__text">Личное здоровье</span>
+  </button>
+</div>
+
+================================================================================
+### END OF FILE: components/filters.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/footer.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--nav">
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">О нас</a></li>
+          <li><a href="#" class="footer__link">Тарифы</a></li>
+          <li><a href="#" class="footer__link">Для бизнеса</a></li>
+          <li><a href="#" class="footer__link">Психологам</a></li>
+          <li><a href="#" class="footer__link">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--nav">
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Блог</a></li>
+          <li><a href="#" class="footer__link">Вебинары</a></li>
+          <li><a href="#" class="footer__link">Подкаст</a></li>
+          <li><a href="#" class="footer__link">Сертификат</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--subscribe">
+        <div class="subscribe">
+          <h3 class="subscribe__title">
+            Одно письмо в неделю со свежими новостями и акциями
+          </h3>
+          <form class="subscribe__form">
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Ваш e-mail"
+            />
+            <button
+              type="submit"
+              class="subscribe__button"
+              aria-label="Подписаться"
+            >
+              <img
+                src="images/icon-send.svg"
+                alt="Отправить"
+                width="24"
+                height="24"
+              />
+            </button>
+          </form>
+          <p class="subscribe__agreement">
+            Подписываясь, я соглашаюсь на обработку персональных данных в
+            соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с
+            Политикой конфиденциальности.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <div class="footer__brand">
+          <img
+            src="images/logo-footer.svg"
+            alt="YOU TALK"
+            class="footer__logo"
+          />
+          <span class="footer__badge">Участник</span>
+        </div>
+        <div class="socials">
+          <a href="#" class="socials__link" aria-label="ВКонтакте">
+            <img src="images/icon-vk.svg" alt="VK" width="32" height="32" />
+          </a>
+          <a href="#" class="socials__link" aria-label="Telegram">
+            <img
+              src="images/icon-telegram.svg"
+              alt="Telegram"
+              width="32"
+              height="32"
+            />
+          </a>
+          <a href="#" class="socials__link" aria-label="Instagram">
+            <img
+              src="images/icon-instagram.svg"
+              alt="Instagram"
+              width="32"
+              height="32"
+            />
+          </a>
+          <a href="#" class="socials__link" aria-label="Дзен">
+            <img src="images/icon-zen.svg" alt="Дзен" width="32" height="32" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__separator"></div>
+
+    <div class="footer__bottom">
+      <span class="footer__copyright">© YOU TALK, 2018–2022</span>
+      <a href="#" class="footer__legal">Юридические документы</a>
+      <span class="footer__payment">Способы оплаты</span>
+    </div>
+  </div>
+</footer>
+
+================================================================================
+### END OF FILE: components/footer.html ###
+================================================================================
+
+
+================================================================================
+### FILE: components/header.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<header class="header">
+  <div class="container header__container">
+    <!-- Логотип -->
+    <a href="/" class="logo">
+      <img src="images/logo.svg" alt="YOU TALK" width="51" height="36" />
+    </a>
+
+    <!-- Навигация -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Тарифы</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Для бизнеса</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Психологам</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Сертификат</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="#" class="nav__link">Материалы</a>
+          <span class="nav__arrow"></span>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Кнопка -->
+    <button class="button button--secondary header__button">
+      Подобрать психолога
+    </button>
+
+    <!-- Бургер -->
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu">
+    <div class="container">
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li><a href="#" class="mobile-menu__link">О нас</a></li>
+          <li><a href="#" class="mobile-menu__link">Тарифы</a></li>
+          <li><a href="#" class="mobile-menu__link">Для бизнеса</a></li>
+          <li><a href="#" class="mobile-menu__link">Психологам</a></li>
+          <li><a href="#" class="mobile-menu__link">Сертификат</a></li>
+          <li><a href="#" class="mobile-menu__link">Материалы</a></li>
+          <li><a href="#" class="mobile-menu__link">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="button button--secondary mobile-menu__button">
+        Подобрать психолога
+      </button>
+    </div>
+  </div>
+</header>
+
+================================================================================
+### END OF FILE: components/header.html ###
+================================================================================
+
+
+================================================================================
+### FILE: css/base.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* ===== БАЗОВЫЕ СТИЛИ И ПЕРЕМЕННЫЕ ===== */
+:root {
+  --color-primary: #35b3a9;
+  --color-primary-dark: #16c8bb;
+  --color-primary-light: #e3f5f5;
+  --color-text: #333333;
+  --color-text-light: #868686;
+  --color-text-secondary: #494949;
+  --color-text-muted: rgba(51, 51, 51, 0.7);
+  --color-bg-footer: #2963a3;
+  --color-border: #c1c5cd;
+  --color-border-light: #dedede;
+  --color-bg-gradient: #eff5fb;
+  --color-white: #ffffff;
+  --font-main: "Montserrat", sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+================================================================================
+### END OF FILE: css/base.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/components.css ###
+### SIZE: 0.01 MB ###
+================================================================================
+
+/* ===== КНОПКИ ===== */
+.button {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button--primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.button--secondary {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.button--secondary:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+.breadcrumbs {
+  padding: 20px 0 16px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "›";
+  margin-left: 8px;
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs__item--current {
+  color: var(--color-text-muted);
+}
+
+/* ===== ЗАГОЛОВОК БЛОГА ===== */
+.blog__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .blog__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/* ===== ФИЛЬТРЫ ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px; /* базовое значение, будет переопределено JS */
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* На планшете и мобилке — горизонтальный скролл */
+@media (max-width: 1023px) {
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px; /* фиксированные отступы */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  transition: all 0.3s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter:hover {
+  border-color: var(--color-primary-dark);
+}
+
+.filter--active {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-dark);
+}
+
+.filter--featured {
+  border: 2px solid var(--color-primary-dark);
+  background: #f9fdfd;
+}
+
+.filter__icon {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* Мобильная версия фильтров — скролл */
+@media (max-width: 1023px) {
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+/* ===== КАРТОЧКИ ===== */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card__media {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 588 / 260;
+  object-fit: cover;
+}
+
+.card--large .card__image {
+  aspect-ratio: 588 / 260;
+}
+
+.card:not(.card--large) .card__image {
+  aspect-ratio: 384 / 217;
+}
+
+.card__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.card__badge--large {
+  top: 7px;
+  left: 8px;
+}
+
+.card__badge--small {
+  top: 47px;
+  left: 8px;
+}
+
+.card__badge--medium {
+  top: 47px;
+  left: 8px;
+  max-width: 197px;
+}
+
+.card__badge-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.card__badge-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.card__content {
+  padding: 20px 16px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  border-top: none;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.card__author {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  color: var(--color-text-secondary);
+}
+
+.card__description {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  margin-top: 8px;
+}
+
+.card__date {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  color: var(--color-text-light);
+  margin: 12px 0;
+}
+
+.card__link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-primary-dark);
+  transition: color 0.3s;
+  margin-top: auto;
+}
+
+.card__link:hover {
+  color: var(--color-primary);
+}
+
+/* Кнопка "Еще" */
+.blog__footer {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 60px;
+}
+
+/* Дополнения для css/components.css (добавить в конец файла) */
+
+/* ===== ЗАГЛУШКА ===== */
+.card--empty {
+  grid-column: span 1;
+  background: #f9f9f9;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card__content--empty {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card__empty-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.card__empty-close {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 18px;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .card--empty {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .card--empty {
+    min-height: 300px;
+  }
+  .card__empty-text {
+    font-size: 16px;
+  }
+}
+
+/* ===== ГРАДИЕНТ (динамический) ===== */
+.gradient-bg {
+  position: absolute;
+  top: var(--gradient-top, 0);
+  left: 0;
+  width: 100%;
+  height: var(--gradient-height, 672px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 41.95%, #ffffff 70.27%),
+    var(--color-bg-gradient);
+  z-index: 0;
+  pointer-events: none;
+  transition:
+    top 0.2s ease,
+    height 0.2s ease;
+}
+
+.main {
+  position: relative;
+}
+
+.main .container {
+  position: relative;
+  z-index: 1;
+}
+
+================================================================================
+### END OF FILE: css/components.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/footer.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* ===== ФУТЕР ===== */
+.footer {
+  background: var(--color-bg-footer);
+  color: var(--color-white);
+  margin-top: 60px;
+  padding: 40px 0 0;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 111px 106px 486px 221px;
+  gap: 61px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--color-white);
+  line-height: 2;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__col--nav .footer__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Подписка */
+.subscribe__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+.subscribe__form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.subscribe__input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid rgba(157, 157, 157, 0.2);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.subscribe__input::placeholder {
+  color: #9d9d9d;
+}
+
+.subscribe__button {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-dark);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe__button img {
+  width: 24px;
+  height: 24px;
+}
+
+.subscribe__agreement {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  opacity: 0.7;
+}
+
+/* Бренд и соцсети */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  height: 50px;
+  width: auto;
+}
+
+.footer__badge {
+  font-weight: 700;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials__link {
+  width: 32px;
+  height: 32px;
+  background: #eff5fb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.socials__link img {
+  width: 16px;
+  height: 16px;
+}
+
+.socials__link:hover {
+  background: var(--color-primary-light);
+}
+
+/* Разделитель и нижняя строка */
+.footer__separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.footer__legal {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__brand {
+    justify-content: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+}
+
+================================================================================
+### END OF FILE: css/footer.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/header.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* ===== ШАПКА ===== */
+.header {
+  background: var(--color-white);
+  box-shadow: inset 0px -2px 0px #eff2f2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 60px;
+}
+
+.logo img {
+  width: 51px;
+  height: 36px;
+}
+
+/* Навигация */
+.nav__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text);
+}
+
+.nav__item--dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--color-text);
+  border-bottom: 1.5px solid var(--color-text);
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: var(--color-white);
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.mobile-menu--open {
+  display: block;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.mobile-menu__button {
+  width: 100%;
+}
+
+================================================================================
+### END OF FILE: css/header.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/layout.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* ===== КОНТЕЙНЕРЫ И СЕТКА ===== */
+.container,
+.header__container,
+.footer .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1280px) {
+  .container,
+  .header__container,
+  .footer .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Градиентный фон (динамический) */
+.main {
+  position: relative;
+}
+
+.gradient-bg {
+  position: absolute;
+  top: var(--gradient-top, 0);
+  left: 0;
+  width: 100%;
+  height: var(--gradient-height, 672px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 41.95%, #ffffff 70.27%),
+    var(--color-bg-gradient);
+  z-index: 0;
+  pointer-events: none;
+  transition:
+    top 0.2s ease,
+    height 0.2s ease;
+}
+
+.main .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Сетка карточек */
+.cards-grid {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.cards-row {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.cards-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Десктоп — 3 колонки */
+@media (min-width: 1025px) {
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card--large {
+    grid-column: span 1.5;
+  }
+}
+
+/* Планшет — 2 колонки */
+@media (max-width: 1024px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card--large {
+    grid-column: span 1;
+  }
+}
+
+/* Мобилка — 1 колонка */
+@media (max-width: 768px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+================================================================================
+### END OF FILE: css/layout.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/responsive.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* ===== АДАПТИВНОСТЬ (дополнительные правила) ===== */
+@media (max-width: 1023px) {
+  .nav,
+  .header__button {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Доступность */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+================================================================================
+### END OF FILE: css/responsive.css ###
+================================================================================
+
+
+================================================================================
+### FILE: css/style.css ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+/* Главный файл стилей */
+@import url("base.css");
+@import url("layout.css");
+@import url("header.css");
+@import url("components.css");
+@import url("footer.css");
+@import url("responsive.css");
+
+================================================================================
+### END OF FILE: css/style.css ###
+================================================================================
+
+
+================================================================================
+### FILE: js/data/cards.json ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+{
+  "cards": [
+    {
+      "image": "article-large-1.png",
+      "alt": "Эмоциональное выгорание",
+      "badgeLarge": "Самооценка и самопринятие",
+      "badgeSmall": "Self",
+      "title": "Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики",
+      "author": "Автор: Лиза Файнтух",
+      "description": "Изначально термин «эмоциональное выгорание» появился в профессиональной сфере и относился...",
+      "date": "21.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-large-2.png",
+      "alt": "Как не утонуть в тревоге",
+      "badgeLarge": "Самооценка и самопринятие",
+      "badgeSmall": "Self",
+      "title": "Как не утонуть в тревоге и управлять своими страхами",
+      "author": "Автор: Екатерина Бельтюкова",
+      "description": "Один из самых важных навыков, которые может дать работа с психотерапевтом — умение в разных ситуациях по-разному обходиться со своими эмоциями...",
+      "date": "11.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-1.png",
+      "alt": "Как управлять эмоциями",
+      "badge": "Self",
+      "title": "Как управлять своими эмоциями: 8 шагов",
+      "author": "Автор: Екатерина Бельтюкова",
+      "description": "Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!",
+      "date": "07.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-2.png",
+      "alt": "Как не утонуть в тревоге",
+      "badge": "Self",
+      "title": "Как не утонуть в тревоге и управлять своими страхами",
+      "author": "Автор: Екатерина Бельтюкова",
+      "description": "Один из самых важных навыков, которые может дать работа с психотерапевтом — умение в разных ситуациях по-разному обходиться со своими эмоциями...",
+      "date": "11.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-3.png",
+      "alt": "Эмоциональное выгорание",
+      "badge": "Self",
+      "title": "Эмоциональное выгорание – стадии и симптомы",
+      "author": "Автор: Лиза Файнтух",
+      "description": "Изначально термин «эмоциональное выгорание» появился в профессиональной сфере...",
+      "date": "21.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-4.png",
+      "alt": "Как управлять эмоциями",
+      "badge": "Self",
+      "title": "Как управлять своими эмоциями: практические советы",
+      "author": "Автор: Екатерина Бельтюкова",
+      "description": "Клиенты часто спрашивают, как контролировать свои негативные эмоции...",
+      "date": "07.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-5.png",
+      "alt": "Self и самооценка",
+      "badge": "Self",
+      "title": "Self: как полюбить себя и повысить самооценку",
+      "author": "Автор: Лиза Файнтух",
+      "description": "Практические упражнения для развития здоровой самооценки...",
+      "date": "15.08.2021",
+      "link": "article.html"
+    },
+    {
+      "image": "article-small-6.png",
+      "alt": "Психология питания",
+      "badge": "Психология питания",
+      "title": "Психология питания: как перестать есть на автомате",
+      "author": "Автор: Анна Иванова",
+      "description": "Осознанное питание — путь к здоровым отношениям с едой...",
+      "date": "10.08.2021",
+      "link": "article.html"
+    }
+  ]
+}
+
+================================================================================
+### END OF FILE: js/data/cards.json ###
+================================================================================
+
+
+================================================================================
+### FILE: js/include.js ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const includes = document.querySelectorAll("[data-include]");
+
+  includes.forEach(async (el) => {
+    const file = el.getAttribute("data-include");
+    try {
+      const response = await fetch(file);
+      const html = await response.text();
+      el.outerHTML = html;
+    } catch (error) {
+      console.error(`Ошибка загрузки ${file}:`, error);
+    }
+  });
+});
+
+================================================================================
+### END OF FILE: js/include.js ###
+================================================================================
+
+
+================================================================================
+### FILE: js/pagination.js ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+// js/pagination.js
+const Pagination = (function () {
+  const CONFIG = {
+    MAX_CARDS_PER_PAGE: 9,
+    GAP: 24,
+    CONTAINER_WIDTH: 1200,
+  };
+
+  /**
+   * Расчет сетки по алгоритму:
+   * - Количество рядов = ceil(карточки / 3)
+   * - Распределение зависит от остатка от деления на 3
+   */
+  function calculateGrid(totalCards) {
+    const n = Math.min(totalCards, CONFIG.MAX_CARDS_PER_PAGE);
+
+    if (n === 0) return [];
+    if (n === 1) return [1];
+    if (n === 2) return [2];
+
+    const remainder = n % 3;
+    const rows = Math.ceil(n / 3);
+    const grid = [];
+
+    switch (remainder) {
+      case 0:
+        for (let i = 0; i < rows; i++) grid.push(3);
+        break;
+      case 2:
+        grid.push(2);
+        for (let i = 1; i < rows; i++) grid.push(3);
+        break;
+      case 1:
+        grid.push(2);
+        grid.push(2);
+        for (let i = 2; i < rows; i++) grid.push(3);
+        break;
+    }
+
+    return grid;
+  }
+
+  /**
+   * Определяет, должна ли карточка с данным индексом быть широкой
+   */
+  function isCardLarge(cardIndex, grid) {
+    if (!grid || grid.length === 0) return false;
+
+    let currentIndex = 0;
+    for (let row = 0; row < grid.length; row++) {
+      const cardsInRow = grid[row];
+      const rowStart = currentIndex;
+      const rowEnd = currentIndex + cardsInRow;
+
+      if (cardIndex >= rowStart && cardIndex < rowEnd) {
+        return cardsInRow === 2;
+      }
+      currentIndex = rowEnd;
+    }
+    return false;
+  }
+
+  return {
+    calculateGrid,
+    isCardLarge,
+    CONFIG,
+  };
+})();
+
+================================================================================
+### END OF FILE: js/pagination.js ###
+================================================================================
+
+
+================================================================================
+### FILE: js/script.js ###
+### SIZE: 0.01 MB ###
+================================================================================
+
+// js/script.js
+let allCards = [];
+
+async function loadCards() {
+  try {
+    const response = await fetch("js/data/cards.json");
+    const data = await response.json();
+    allCards = data.cards || [];
+    return allCards;
+  } catch (error) {
+    console.error("Ошибка загрузки данных карточек:", error);
+    return [];
+  }
+}
+
+function getCardTemplates() {
+  const smallTemplate = document.getElementById("card-template");
+  const largeTemplate = document.getElementById("card-large-template");
+
+  if (!smallTemplate || !largeTemplate) {
+    console.error("Шаблоны карточек не найдены");
+    return null;
+  }
+
+  return {
+    small: smallTemplate.innerHTML,
+    large: largeTemplate.innerHTML,
+  };
+}
+
+function createCardHTML(card, isWide) {
+  const templateId = isWide ? "card-large-template" : "card-template";
+  const template = document.getElementById(templateId);
+  if (!template) return "";
+
+  let html = template.innerHTML;
+
+  if (isWide) {
+    html = html.replace(/\{\{badgeLarge\}\}/g, card.badgeLarge || card.badge);
+    html = html.replace(/\{\{badgeSmall\}\}/g, card.badgeSmall || card.badge);
+  } else {
+    html = html.replace(/\{\{badge\}\}/g, card.badge);
+  }
+
+  html = html.replace(/\{\{image\}\}/g, card.image);
+  html = html.replace(/\{\{alt\}\}/g, card.alt);
+  html = html.replace(/\{\{title\}\}/g, card.title);
+  html = html.replace(/\{\{author\}\}/g, card.author);
+  html = html.replace(/\{\{description\}\}/g, card.description);
+  html = html.replace(/\{\{date\}\}/g, card.date);
+  html = html.replace(/\{\{link\}\}/g, card.link);
+
+  return html;
+}
+
+function showEmptyCards() {
+  const container = document.getElementById("cardsGrid");
+  if (!container) return;
+
+  container.innerHTML = `
+        <div class="card card--placeholder"></div>
+        <div class="card card--empty">
+            <div class="card__content card__content--empty">
+                <p class="card__empty-text">Здесь может быть ваша статья</p>
+                <span class="card__empty-close" aria-label="Закрыть">✕</span>
+            </div>
+        </div>
+        <div class="card card--placeholder"></div>
+    `;
+}
+
+async function renderCards() {
+  const container = document.getElementById("cardsGrid");
+  if (!container) return;
+
+  await loadCards();
+  const displayCards = allCards.slice(0, Pagination.CONFIG.MAX_CARDS_PER_PAGE);
+
+  if (displayCards.length === 0) {
+    showEmptyCards();
+    updateGradientHeight();
+    adjustFiltersGap();
+    return;
+  }
+
+  const grid = Pagination.calculateGrid(displayCards.length);
+  let cardsHtml = "";
+  let cardIndex = 0;
+
+  for (let row = 0; row < grid.length; row++) {
+    const cardsInRow = grid[row];
+    const isWideRow = cardsInRow === 2;
+    cardsHtml += `<div class="cards-row" style="display: grid; grid-template-columns: repeat(${cardsInRow}, 1fr); gap: 24px;">`;
+
+    for (let col = 0; col < cardsInRow; col++) {
+      const isWide = isWideRow;
+      cardsHtml += createCardHTML(displayCards[cardIndex], isWide);
+      cardIndex++;
+    }
+
+    cardsHtml += `</div>`;
+  }
+
+  container.innerHTML = cardsHtml;
+  updateGradientHeight();
+  adjustFiltersGap();
+}
+
+function updateGradientHeight() {
+  const cardsGrid = document.getElementById("cardsGrid");
+  const gradientBg = document.querySelector(".gradient-bg");
+  const main = document.querySelector(".main");
+
+  if (!cardsGrid || !gradientBg || !main) return;
+
+  const cardsHeight = cardsGrid.offsetHeight;
+  const gradientHeight = cardsHeight / 2;
+
+  const cardsRect = cardsGrid.getBoundingClientRect();
+  const mainRect = main.getBoundingClientRect();
+  const topOffset = cardsRect.top - mainRect.top + 117;
+
+  gradientBg.style.setProperty("--gradient-top", `${topOffset}px`);
+  gradientBg.style.setProperty("--gradient-height", `${gradientHeight}px`);
+}
+
+function adjustFiltersGap() {
+  const filtersContainer = document.querySelector(".filters");
+  if (!filtersContainer) return;
+
+  const parent = filtersContainer.parentElement;
+  const parentStyle = getComputedStyle(parent);
+  const parentPaddingLeft = parseFloat(parentStyle.paddingLeft);
+  const parentPaddingRight = parseFloat(parentStyle.paddingRight);
+  const containerWidth =
+    parent.clientWidth - parentPaddingLeft - parentPaddingRight;
+
+  const filters = Array.from(filtersContainer.children);
+  if (filters.length === 0) return;
+
+  let totalFiltersWidth = 0;
+  filters.forEach((filter) => {
+    totalFiltersWidth += filter.offsetWidth;
+  });
+
+  let currentGap = parseInt(getComputedStyle(filtersContainer).gap) || 8;
+  let neededWidth = totalFiltersWidth + currentGap * (filters.length - 1);
+
+  // Если не помещаются — уменьшаем gap
+  while (neededWidth > containerWidth && currentGap > 4) {
+    currentGap--;
+    neededWidth = totalFiltersWidth + currentGap * (filters.length - 1);
+  }
+
+  // Если есть свободное место — увеличиваем gap, но не более 12px
+  if (neededWidth < containerWidth) {
+    const freeSpace = containerWidth - neededWidth;
+    const gapIncrease = Math.floor(freeSpace / (filters.length - 1));
+    let newGap = Math.min(12, currentGap + gapIncrease);
+    if (newGap > currentGap) {
+      currentGap = newGap;
+    }
+  }
+
+  filtersContainer.style.gap = `${currentGap}px`;
+}
+
+function initBurger() {
+  const burger = document.querySelector(".burger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  if (burger && mobileMenu) {
+    burger.addEventListener("click", () => {
+      const expanded = burger.getAttribute("aria-expanded") === "true";
+      burger.setAttribute("aria-expanded", !expanded);
+      mobileMenu.classList.toggle("mobile-menu--open");
+      document.body.classList.toggle("no-scroll");
+    });
+
+    mobileMenu.querySelectorAll("a, button").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("mobile-menu--open");
+        burger.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCards();
+  initBurger();
+
+  window.addEventListener("resize", () => {
+    updateGradientHeight();
+    adjustFiltersGap();
+  });
+});
+
+================================================================================
+### END OF FILE: js/script.js ###
+================================================================================
+
+
+================================================================================
+### FILE: index.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOU TALK — Блог о психологии</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+
+    <main class="main">
+      <div class="gradient-bg"></div>
+
+      <div class="container">
+        <div data-include="components/breadcrumbs.html"></div>
+        <h1 class="blog__title">Блог</h1>
+        <div data-include="components/filters.html"></div>
+      </div>
+
+      <div class="container">
+        <div class="cards-grid" id="cardsGrid"></div>
+        <div class="blog__footer">
+          <button class="button button--primary">Еще</button>
+        </div>
+      </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <!-- ШАБЛОНЫ КАРТОЧЕК -->
+    <template id="card-template">
+      <article class="card">
+        <div class="card__media">
+          <img src="images/{{image}}" alt="{{alt}}" class="card__image" />
+          <div class="card__badge card__badge--small">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badge}}</span>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2 class="card__title">{{title}}</h2>
+          <div class="card__meta">
+            <span class="card__author">{{author}}</span>
+          </div>
+          <p class="card__description">{{description}}</p>
+          <time class="card__date">{{date}}</time>
+          <a href="{{link}}" class="card__link">Читать далее →</a>
+        </div>
+      </article>
+    </template>
+
+    <template id="card-large-template">
+      <article class="card card--large">
+        <div class="card__media">
+          <img src="images/{{image}}" alt="{{alt}}" class="card__image" />
+          <div class="card__badge card__badge--large">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badgeLarge}}</span>
+          </div>
+          <div class="card__badge card__badge--small">
+            <img
+              src="images/icon-unicorn.svg"
+              alt=""
+              class="card__badge-icon"
+              width="20"
+              height="20"
+            />
+            <span class="card__badge-text">{{badgeSmall}}</span>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2 class="card__title">{{title}}</h2>
+          <div class="card__meta">
+            <span class="card__author">{{author}}</span>
+          </div>
+          <p class="card__description">{{description}}</p>
+          <time class="card__date">{{date}}</time>
+          <a href="{{link}}" class="card__link">Читать далее →</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="js/pagination.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+================================================================================
+### END OF FILE: index.html ###
+================================================================================
+
+
+================================================================================
+### FILE: article.html ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+[ERROR: Could not decode file]
+
+================================================================================
+### END OF FILE: article.html ###
+================================================================================
+
+
+================================================================================
+### FILE: README.md ###
+### SIZE: 0.00 MB ###
+================================================================================
+
+# Дамп всего проекта (components, css, js + корневые файлы)
+
+python dump_web_project.py
+
+# Дамп только компонентов
+
+python dump_web_project.py --target components
+
+# Дамп только JS и данных
+
+python dump_web_project.py --target js
+
+# Дамп только данных (cards.json)
+
+python dump_web_project.py --target js/data
+
+# Свое имя файла
+
+python dump_web_project.py --output my_project_dump.txt
+
+================================================================================
+### END OF FILE: README.md ###
+================================================================================
+

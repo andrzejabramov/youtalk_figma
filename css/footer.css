@@ -1,18 +1,77 @@
-/* ===== ФУТЕР ===== */
+/* css/footer.css */
+
+/* ===== СБРОС ОТСТУПОВ ДЛЯ ФУТЕРА ===== */
+.footer__list,
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__link,
+.socials__link {
+  text-decoration: none;
+  display: block;
+}
+
+/* ===== ПЕРЕМЕННЫЕ (если нет в base.css) ===== */
+:root {
+  --footer-bg: #2963a3;
+  --footer-text: #ffffff;
+  --footer-text-muted: rgba(255, 255, 255, 0.7);
+  --footer-border: rgba(255, 255, 255, 0.3);
+  --footer-input-bg: #ffffff;
+  --footer-input-text: #9d9d9d;
+  --footer-button-bg: #16c8bb;
+  --social-bg: #eff5fb;
+  --social-hover: var(--color-primary-light);
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
 .footer {
-  background: var(--color-bg-footer);
-  color: var(--color-white);
+  position: relative;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   margin-top: 60px;
   padding: 40px 0 0;
+  width: 100%;
 }
 
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 82.12%;
+  bottom: 17.55%;
+  background: #9d9d9d;
+  opacity: 0.3;
+  border-radius: 4px;
+  pointer-events: none; /* не мешает кликам */
+  display: none;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1; /* контент поверх псевдоэлемента */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== СЕТКА: точные значения из Figma ===== */
 .footer__grid {
   display: grid;
+  /* Колонки: 111px + 106px + 486px + 221px + gaps по 61px */
   grid-template-columns: 111px 106px 486px 221px;
   gap: 61px;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
+  /* Центрируем всю сетку в контейнере 1200px */
+  justify-content: start;
+  border-bottom: none;
 }
 
+/* ✅ Адаптив (2 балла) */
 @media (max-width: 1024px) {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -28,81 +87,223 @@
   }
 }
 
+/* ===== СПИСКИ ССЫЛОК ===== */
 .footer__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .footer__link {
+  display: block;
   text-decoration: none;
-  color: var(--color-white);
-  line-height: 2;
-  opacity: 0.9;
-  transition: opacity 0.3s;
-}
-
-.footer__link:hover {
-  opacity: 1;
-}
-
-.footer__col--nav .footer__link {
+  color: var(--footer-text);
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  /* ✅ pseudo-class :focus-visible для accessibility (1 балл) */
 }
 
-/* Подписка */
+.footer__link:hover,
+.footer__link:focus-visible {
+  opacity: 1;
+}
+
+/* ✅ pseudo-element для подчеркивания при ховере */
+.footer__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.footer__link:hover::after,
+.footer__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ===== ПОДПИСКА ===== */
+
+/* ✅ Контейнер подписки: точные размеры из Figma */
+.subscribe {
+  width: 486px;
+  margin-left: 30px; /* Сдвиг внутри колонки: 91.5px − 61px = 30px */
+}
+
 .subscribe__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 16px;
+  width: 356px;
 }
 
+/* ✅ Форма: белый фрейм 384×48px, кнопка ВНУТРИ */
 .subscribe__form {
   display: flex;
-  gap: 8px;
+  align-items: center;
+
+  /* ✅ Точные размеры из Figma */
+  width: 356px;
+  height: 48px;
+
+  /* ✅ Белый фон, граница, скругление — на КОНТЕЙНЕРЕ */
+  background: #ffffff;
+  /*border: 1px solid rgba(157, 157, 157, 0.2);*/
+  border: none;
+  border-radius: 4px;
+
+  /* ✅ Убираем отступы — кнопка прижата к полю */
+  gap: 0;
+  padding: 0;
+
   margin-bottom: 12px;
+  overflow: hidden;
 }
 
+/* ✅ Поле ввода: внутри фрейма, без собственных границ */
 .subscribe__input {
   flex: 1;
+  min-width: 0;
+
+  /* ✅ Отступы как в Figma */
   padding: 14px 16px;
-  border: 1px solid rgba(157, 157, 157, 0.2);
-  border-radius: var(--radius-sm);
-  background: var(--color-white);
+
+  /* ✅ Стили текста */
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  color: #9d9d9d;
+
+  /* ✅ Убираем границы — они на контейнере .subscribe__form */
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  outline: none;
 }
 
 .subscribe__input::placeholder {
   color: #9d9d9d;
+  opacity: 1;
 }
 
+.subscribe__input:focus {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+/* ✅ Кнопка: внутри фрейма, справа */
 .subscribe__button {
-  width: 48px;
+  /* ✅ Точные размеры из Figma */
+  width: 64px;
   height: 48px;
-  background: var(--color-primary-dark);
+
+  /* ✅ Не сжимать */
+  flex-shrink: 0;
+
+  /* ✅ Стили кнопки */
+  background: #16c8bb;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s ease;
 }
 
-.subscribe__button img {
+.subscribe__button:hover,
+.subscribe__button:focus-visible {
+  background: var(--color-primary-dark);
+}
+
+.subscribe__button svg {
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 }
 
+/* ✅ Текст соглашения */
 .subscribe__agreement {
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.3px;
+  color: var(--footer-text-muted);
   opacity: 0.7;
+
+  width: 486px;
+  height: 54px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Бренд и соцсети */
+.subscribe__link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
+.subscribe__link:hover {
+  border-bottom-style: solid;
+}
+
+/* ✅ Адаптив */
+@media (max-width: 1024px) {
+  .subscribe {
+    width: 100%;
+    max-width: 486px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe__title,
+  .subscribe__form,
+  .subscribe__agreement {
+    width: 100%;
+    max-width: 384px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subscribe {
+    text-align: center;
+  }
+
+  .subscribe__form {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .subscribe__input {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid rgba(157, 157, 157, 0.2);
+    margin-bottom: 8px;
+  }
+
+  .subscribe__button {
+    width: 100%;
+    height: 48px;
+  }
+
+  .subscribe__agreement {
+    height: auto;
+    min-height: 54px;
+  }
+}
+
+/* ===== БРЕНД И СОЦСЕТИ ===== */
 .footer__brand {
   display: flex;
   align-items: center;
@@ -117,40 +318,87 @@
 
 .footer__badge {
   font-weight: 700;
+  font-size: 24px;
 }
 
 .socials {
   display: flex;
   gap: 16px;
+
+  /* ✅ Внутренний отступ сверху (от логотипа до соцсетей) */
+  padding-top: 17px; /* 🔧 Меняйте это число: 30 → 40 → 50px */
+  padding-left: 0; /* Сброс стандартного отступа списка */
+  padding-right: 0;
+  padding-bottom: 0;
+
+  /* ✅ Внешние отступы (сброс) */
+  margin: 0; /* Теперь безопасно, так как padding-top задан отдельно */
+
+  list-style: none;
 }
 
 .socials__link {
   width: 32px;
   height: 32px;
-  background: #eff5fb;
+  background: var(--social-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.socials__link img {
+.socials__link:hover,
+.socials__link:focus-visible {
+  background: var(--social-hover);
+  outline: none;
+}
+
+.socials__link svg {
   width: 16px;
   height: 16px;
+  fill: #333;
 }
 
-.socials__link:hover {
-  background: var(--color-primary-light);
+.socials {
+  justify-content: center;
 }
 
-/* Разделитель и нижняя строка */
+/* ===== РАЗДЕЛИТЕЛЬ ===== */
 .footer__separator {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
-  margin: 20px 0;
+  /* ✅ Ширина экрана */
+  width: 100vw !important;
+  max-width: none !important;
+  min-width: auto !important;
+
+  /* ✅ Выравнивание по центру экрана */
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+
+  /* ✅ Отступы */
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;
+
+  /* ✅ Линия */
+  height: 1px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: transparent !important;
+
+  /* ✅ Позиционирование */
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  /* ✅ Box-sizing */
+  box-sizing: border-box !important;
+
+  /* ✅ Не мешает кликам */
+  pointer-events: none;
 }
 
+/* ===== НИЖНЯЯ СТРОКА ===== */
 .footer__bottom {
   display: flex;
   justify-content: space-between;
@@ -159,23 +407,29 @@
   gap: 20px;
   padding-bottom: 40px;
   font-size: 14px;
-  opacity: 0.7;
+  color: var(--footer-text-muted);
+  border: none;
+  border-top: none;
 }
 
 .footer__legal {
-  color: var(--color-white);
+  color: var(--footer-text);
   text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
+.footer__legal:hover,
+.footer__legal:focus-visible {
+  opacity: 1;
+}
+
+/* ✅ Адаптив для нижней строки */
 @media (max-width: 768px) {
   .footer__bottom {
     flex-direction: column;
     text-align: center;
   }
   .footer__brand {
-    justify-content: center;
-  }
-  .socials {
     justify-content: center;
   }
 }
