@@ -1,7 +1,28 @@
 /* Главный файл стилей */
 @import url("base.css");
-@import url("layout.css");
-@import url("header.css");
-@import url("components.css");
-@import url("footer.css");
+@import url("global/gradient.css");
 @import url("responsive.css");
+
+@import url("global/button-base.css");
+@import url("global/breadcrumbs.css");
+@import url("global/button-more.css");
+@import url("global/button-header.css");
+
+/* Хедер */
+@import url("header/logo.css");
+@import url("header/nav.css");
+@import url("header/burger.css");
+@import url("header/mobile-menu.css");
+@import url("header/header.css");
+
+/* Карточки и фильтры */
+@import url("cards/cards.css");
+@import url("filters/filters.css");
+
+/* Футер */
+@import url("footer/grid.css");
+@import url("footer/subscribe.css");
+@import url("footer/socials.css");
+@import url("footer/bottom.css");
+@import url("footer/separator.css");
+@import url("footer/footer.css");

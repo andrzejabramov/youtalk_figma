@@ -156,7 +156,7 @@ function adjustFiltersGap() {
   if (neededWidth < containerWidth) {
     const freeSpace = containerWidth - neededWidth;
     const gapIncrease = Math.floor(freeSpace / (filters.length - 1));
-    let newGap = Math.min(12, currentGap + gapIncrease);
+    let newGap = Math.min(24, currentGap + gapIncrease);
     if (newGap > currentGap) {
       currentGap = newGap;
     }

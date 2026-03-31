@@ -1,0 +1,39 @@
+/* ===== СЕТКА ФУТЕРА ===== */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 121px 121px 1fr 221px;
+  gap: 70px;
+  padding-bottom: 40px;
+  margin: 0;
+  justify-content: start;
+  border-bottom: none;
+}
+
+/* ✅ Увеличиваем расстояние между колонками */
+.footer__col:nth-child(1) {
+  margin-right: 24px; /* 🔧 между 1-й и 2-й */
+}
+
+.footer__col:nth-child(2) {
+  margin-right: 10px; /* 🔧 между 2-й и 3-й */
+}
+
+.footer__col:nth-child(3) {
+  margin-right: 0; /* между 3-й и 4-й не увеличиваем */
+}
+
+/* ✅ Адаптив */
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+}

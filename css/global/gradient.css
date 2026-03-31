@@ -1,0 +1,26 @@
+/* ===== ДИНАМИЧЕСКИЙ ГРАДИЕНТ ===== */
+
+.gradient-bg {
+  position: absolute;
+  top: var(--gradient-top, 0);
+  left: 0;
+  width: 100%;
+  height: var(--gradient-height, 672px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 41.95%, #ffffff 70.27%),
+    var(--color-bg-gradient);
+  z-index: 0;
+  pointer-events: none;
+  transition:
+    top 0.2s ease,
+    height 0.2s ease;
+}
+
+.main {
+  position: relative;
+}
+
+.main .container {
+  position: relative;
+  z-index: 1;
+}

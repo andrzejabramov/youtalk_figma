@@ -1,0 +1,43 @@
+/* ===== СЕТКА КАРТОЧЕК ===== */
+
+.cards-grid {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.cards-row {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.cards-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Десктоп — 3 колонки */
+@media (min-width: 1025px) {
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card--large {
+    grid-column: span 1.5;
+  }
+}
+
+/* Планшет — 2 колонки */
+@media (max-width: 1024px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card--large {
+    grid-column: span 1;
+  }
+}
+
+/* Мобилка — 1 колонка */
+@media (max-width: 768px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}

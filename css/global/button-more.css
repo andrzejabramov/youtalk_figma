@@ -1,0 +1,88 @@
+/* ===== КНОПКА "ЕЩЕ" С ПАГИНАЦИЕЙ ===== */
+
+.blog__footer {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.blog__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Точные размеры из Figma */
+  width: 182px;
+  height: 48px;
+  padding: 12px 72.5px;
+
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  box-sizing: border-box;
+  position: relative;
+}
+
+.blog__button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.blog__button-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+/* Скрытые элементы (будущая пагинация) */
+.blog__button-icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.blog__button-icon--left {
+  left: 16px;
+}
+
+.blog__button-icon--right {
+  right: 16px;
+}
+
+.blog__button-smiley {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.blog__button-icon svg,
+.blog__button-smiley svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ✅ Активные состояния (будущая функциональность) */
+.blog__button--has-prev .blog__button-icon--left,
+.blog__button--has-next .blog__button-icon--right,
+.blog__button--has-smiley .blog__button-smiley {
+  display: block;
+}
+
+/* При появлении стрелок текст автоматически получает отступы */
+.blog__button--has-prev .blog__button-text,
+.blog__button--has-next .blog__button-text {
+  padding-left: 32px;
+  padding-right: 32px;
+}

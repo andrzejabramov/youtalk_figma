@@ -1,0 +1,30 @@
+/* ===== НАВИГАЦИЯ ===== */
+
+.nav__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text);
+}
+
+.nav__item--dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--color-text);
+  border-bottom: 1.5px solid var(--color-text);
+  transform: rotate(45deg);
+  margin-top: -3px;
+}

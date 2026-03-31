@@ -1,0 +1,97 @@
+/* ===== FOOTER MAIN ===== */
+
+/* Сбросы и переменные для футера */
+:root {
+  --footer-bg: #2963a3;
+  --footer-text: #ffffff;
+  --footer-text-muted: rgba(255, 255, 255, 0.7);
+  --footer-border: rgba(255, 255, 255, 0.3);
+  --footer-input-bg: #ffffff;
+  --footer-input-text: #9d9d9d;
+  --footer-button-bg: #16c8bb;
+  --social-bg: #eff5fb;
+  --social-hover: var(--color-primary-light);
+}
+
+/* ===== ОСНОВНЫЕ СТИЛИ ФУТЕРА ===== */
+.footer {
+  margin-top: 60px;
+  width: 100%;
+}
+
+/* Верхняя часть — без фона */
+.footer__top {
+  background: transparent;
+  padding: 0;
+}
+
+/* Нижняя часть — с синим фоном */
+.footer__bottom-bg {
+  background: var(--footer-bg);
+  padding: 40px 0 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== СБРОС ОТСТУПОВ ДЛЯ СПИСКОВ ===== */
+.footer__list,
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__link,
+.socials__link {
+  text-decoration: none;
+  display: block;
+}
+
+/* ===== СТИЛИ ДЛЯ СПИСКОВ ССЫЛОК (МЕНЮ) ===== */
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer__link {
+  color: var(--footer-text);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  opacity: 1;
+}
+
+.footer__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.footer__link:hover::after,
+.footer__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ===== КОЛОНКА 4: БРЕНД И СОЦСЕТИ ===== */
+.footer__col--brand {
+  display: flex;
+  flex-direction: column;
+  gap: 42px; /* ✅ отступ между логотипом и соцсетями */
+}

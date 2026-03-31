@@ -1,0 +1,67 @@
+/* ===== CARDS MAIN ===== */
+
+@import url("card.css");
+@import url("card-badge.css");
+@import url("card-content.css");
+@import url("card-grid.css");
+
+/* ===== ЗАГЛУШКА (пустая карточка) ===== */
+
+.card--empty {
+  grid-column: span 1;
+  background: #f9f9f9;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card__content--empty {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card__empty-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.card__empty-close {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 18px;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .card--empty {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .card--empty {
+    min-height: 300px;
+  }
+  .card__empty-text {
+    font-size: 16px;
+  }
+}

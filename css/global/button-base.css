@@ -1,0 +1,15 @@
+/* ===== БАЗОВЫЙ СТИЛЬ ДЛЯ ВСЕХ КНОПОК ===== */
+
+.button {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s;
+}

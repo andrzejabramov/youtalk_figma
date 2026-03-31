@@ -1,0 +1,54 @@
+/* ===== БРЕНД И СОЦСЕТИ ===== */
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.footer__logo {
+  height: 50px;
+  width: auto;
+}
+
+.footer__badge {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.socials__link {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: var(--social-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.socials__link:hover,
+.socials__link:focus-visible {
+  background: var(--social-hover);
+  outline: none;
+}
+
+.socials__link svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: #333;
+}

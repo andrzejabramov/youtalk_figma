@@ -1,178 +1,206 @@
-<!-- components/footer.html -->
 <footer class="footer">
-  <div class="container">
-    <!-- Верхняя часть: 4 колонки -->
-    <div class="footer__grid">
-      <!-- Колонка 1: Навигация -->
-      <nav class="footer__col" aria-label="Основное меню">
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">О нас</a></li>
-          <li><a href="#" class="footer__link">Тарифы</a></li>
-          <li><a href="#" class="footer__link">Для бизнеса</a></li>
-          <li><a href="#" class="footer__link">Психологам</a></li>
-          <li><a href="#" class="footer__link">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <!-- Колонка 2: Навигация -->
-      <nav class="footer__col" aria-label="Дополнительное меню">
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Блог</a></li>
-          <li><a href="#" class="footer__link">Вебинары</a></li>
-          <li><a href="#" class="footer__link">Подкаст</a></li>
-          <li><a href="#" class="footer__link">Сертификат</a></li>
-          <li><a href="#" class="footer__link">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <!-- Колонка 3: Подписка -->
-      <div class="footer__col footer__col--subscribe">
-        <div class="subscribe">
-          <h3 class="subscribe__title">
-            Одно письмо в неделю со свежими новостями и акциями
-          </h3>
-          <form class="subscribe__form" action="#" method="POST">
-            <label for="subscribe-email" class="visually-hidden"
-              >Ваш e-mail</label
-            >
-            <input
-              type="email"
-              id="subscribe-email"
-              name="email"
-              class="subscribe__input"
-              placeholder="Ваш e-mail"
-              required
-              aria-required="true"
-            />
-            <button
-              type="submit"
-              class="subscribe__button"
-              aria-label="Подписаться"
-            >
-              <!-- Иконка стрелки (вставить SVG) -->
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </form>
-          <p class="subscribe__agreement">
-            Подписываясь, я соглашаюсь на обработку персональных данных в<br />
-            соответствии с
-            <a href="/legal/152-fz" class="subscribe__link"
-              >ФЗ РФ №&nbsp;152‑ФЗ</a
-            >
-            «О персональных данных», а также с <br />
-            <a href="/privacy-policy" class="subscribe__link"
-              >Политикой конфиденциальности</a
-            >.
-          </p>
-        </div>
-      </div>
-      <!-- Колонка 4: Бренд + соцсети -->
-      <div class="footer__col footer__col--brand">
-        <div class="footer__brand">
-          <img
-            src="images/logo-footer.svg"
-            alt="YOU TALK"
-            class="footer__logo"
-            width="51"
-            height="36"
-          />
-          <span class="footer__badge">Участник</span>
-        </div>
-        <nav class="socials" aria-label="Социальные сети">
-          <a
-            href="#"
-            class="socials__link"
-            aria-label="ВКонтакте"
-            target="_blank"
-            rel="noopener"
+  <!-- Верхняя часть: кнопка + пагинация (без синего фона) -->
+  <div class="footer__top">
+    <div class="container">
+      <div class="blog__footer">
+        <button class="button button--primary blog__button">
+          <span
+            class="blog__button-icon blog__button-icon--left"
+            aria-hidden="true"
           >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              aria-hidden="true"
-            >
-              <!-- VK icon path -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-          </a>
-          <a
-            href="#"
-            class="socials__link"
-            aria-label="Telegram"
-            target="_blank"
-            rel="noopener"
+          </span>
+          <span class="blog__button-text">Еще</span>
+          <span
+            class="blog__button-icon blog__button-icon--right"
+            aria-hidden="true"
           >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              aria-hidden="true"
-            >
-              <!-- Telegram icon path -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-          </a>
-          <a
-            href="#"
-            class="socials__link"
-            aria-label="Instagram"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              aria-hidden="true"
-            >
-              <!-- Instagram icon path -->
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="socials__link"
-            aria-label="Дзен"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              aria-hidden="true"
-            >
-              <!-- Zen icon path -->
-            </svg>
-          </a>
-        </nav>
+          </span>
+          <span class="blog__button-smiley" aria-hidden="true">
+            <img src="images/icon-smile.svg" alt="" width="20" height="20" />
+          </span>
+        </button>
       </div>
     </div>
+  </div>
 
-    <!-- Разделитель -->
-    <div class="footer__separator" aria-hidden="true"></div>
+  <!-- Нижняя часть: синий фон -->
+  <div class="footer__bottom-bg">
+    <div class="container">
+      <!-- Сетка футера (4 колонки) -->
+      <div class="footer__grid">
+        <!-- Колонка 1: Навигация -->
+        <nav class="footer__col" aria-label="Основное меню">
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">О нас</a></li>
+            <li><a href="#" class="footer__link">Тарифы</a></li>
+            <li><a href="#" class="footer__link">Для бизнеса</a></li>
+            <li><a href="#" class="footer__link">Психологам</a></li>
+            <li><a href="#" class="footer__link">FAQ</a></li>
+          </ul>
+        </nav>
 
-    <!-- Нижняя строка -->
-    <div class="footer__bottom">
-      <span class="footer__copyright">&copy; YOU TALK, 2018–2022</span>
-      <a href="#" class="footer__legal">Юридические документы</a>
-      <span class="footer__payment">Способы оплаты</span>
+        <!-- Колонка 2: Навигация -->
+        <nav class="footer__col" aria-label="Дополнительное меню">
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Блог</a></li>
+            <li><a href="#" class="footer__link">Вебинары</a></li>
+            <li><a href="#" class="footer__link">Подкаст</a></li>
+            <li><a href="#" class="footer__link">Сертификат</a></li>
+            <li><a href="#" class="footer__link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <!-- Колонка 3: Подписка -->
+        <div class="footer__col footer__col--subscribe">
+          <div class="subscribe">
+            <h3 class="subscribe__title">
+              Одно письмо в неделю со свежими новостями и акциями
+            </h3>
+            <form class="subscribe__form" action="#" method="POST">
+              <label for="subscribe-email" class="visually-hidden"
+                >Ваш e-mail</label
+              >
+              <input
+                type="email"
+                id="subscribe-email"
+                name="email"
+                class="subscribe__input"
+                placeholder="Ваш e-mail"
+                required
+                aria-required="true"
+              />
+              <button
+                type="submit"
+                class="subscribe__button"
+                aria-label="Подписаться"
+              >
+                <img
+                  src="images/send.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                />
+              </button>
+            </form>
+            <p class="subscribe__agreement">
+              Подписываясь, я соглашаюсь на обработку персональных данных в<br />
+              соответствии с
+              <a href="/legal/152-fz" class="subscribe__link"
+                >ФЗ РФ №&nbsp;152‑ФЗ</a
+              >
+              «О персональных данных», а также с <br />
+              <a href="/privacy-policy" class="subscribe__link"
+                >Политикой конфиденциальности</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Колонка 4: Бренд + соцсети -->
+        <div class="footer__col footer__col--brand">
+          <div class="footer__brand">
+            <img
+              src="images/logo-footer.svg"
+              alt="YOU TALK"
+              class="footer__logo"
+              width="51"
+              height="36"
+            />
+            <span class="footer__badge">Участник</span>
+          </div>
+          <nav class="socials" aria-label="Социальные сети">
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="ВКонтакте"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="images/icon-vk.svg"
+                alt=""
+                width="32"
+                height="32"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="Telegram"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="images/icon-telegram.svg"
+                alt=""
+                width="32"
+                height="32"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="images/icon-instagram.svg"
+                alt=""
+                width="32"
+                height="32"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="#"
+              class="socials__link"
+              aria-label="Дзен"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="images/icon-zen.svg"
+                alt=""
+                width="32"
+                height="32"
+                aria-hidden="true"
+              />
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Разделитель -->
+      <div class="footer__separator" aria-hidden="true"></div>
+
+      <!-- Нижняя строка -->
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; Youtalk, 2018 – 2022</span>
+        <a href="#" class="footer__legal">Юридические документы</a>
+        <span class="footer__payment">Способы оплаты</span>
+      </div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,14 @@
+/* ===== БУРГЕР-МЕНЮ ===== */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+}

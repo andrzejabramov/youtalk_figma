@@ -1,0 +1,18 @@
+/* ===== HEADER MAIN ===== */
+
+.header {
+  background: var(--color-white);
+  box-shadow: inset 0px -2px 0px #eff2f2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 60px;
+}
