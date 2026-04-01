@@ -8,14 +8,19 @@
 /* ===== ЗАГЛУШКА (пустая карточка) ===== */
 
 .card--empty {
-  grid-column: span 1;
-  background: #f9f9f9;
-  border: 2px dashed var(--color-border);
+  /* ✅ Наследуем стили обычной карточки */
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
   border-radius: var(--radius-md);
-  min-height: 400px;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+  /* ✅ Ограничение ширины для одиночной карточки */
+  max-width: 384px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card--placeholder {
@@ -24,11 +29,14 @@
 }
 
 .card__content--empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 32px 24px;
   background: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .card__empty-text {
@@ -49,6 +57,7 @@
   color: var(--color-text);
   font-size: 18px;
   cursor: default;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {

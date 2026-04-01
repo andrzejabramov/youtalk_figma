@@ -1,5 +1,4 @@
 /* ===== СЕТКА КАРТОЧЕК ===== */
-
 .cards-grid {
   display: block;
   margin-bottom: 48px;
@@ -9,6 +8,13 @@
   display: grid;
   gap: 24px;
   margin-bottom: 24px;
+}
+
+/* Ограничение для одиночной карточки в любом ряду */
+.cards-row:first-child:last-child .card {
+  max-width: 588px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cards-row:last-child {
@@ -26,7 +32,7 @@
 }
 
 /* Планшет — 2 колонки */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .cards-row {
     grid-template-columns: repeat(2, 1fr);
   }
