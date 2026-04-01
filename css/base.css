@@ -59,6 +59,8 @@ button {
 }
 
 /* ===== КОНТЕЙНЕРЫ ===== */
+
+/* Desktop (≥ 1280px) — база */
 .container,
 .header__container,
 .footer .container {
@@ -69,11 +71,32 @@ button {
   padding-right: 0;
 }
 
-@media (max-width: 768px) {
+/* Laptop (1024px – 1279px) */
+@media (max-width: 1279px) {
   .container,
   .header__container,
   .footer .container {
+    max-width: 934px;
+  }
+}
+
+/* Tablet (768px – 1023px) — контейнер на всю ширину с отступами */
+@media (max-width: 1023px) {
+  .container,
+  .header__container,
+  .footer .container {
+    max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+/* Mobile Small (≤ 375px) — уменьшаем отступы */
+@media (max-width: 375px) {
+  .container,
+  .header__container,
+  .footer .container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

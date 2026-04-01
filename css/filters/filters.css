@@ -3,20 +3,44 @@
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 8px;
   margin-bottom: 48px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
 
-/* На планшете и мобилке — горизонтальный скролл */
-@media (max-width: 1023px) {
+/* Desktop (≥ 1280px) — в строку, gap через JS */
+@media (min-width: 1280px) {
+  .filters {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Laptop (1024px – 1279px) — перенос */
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .filters {
+    flex-wrap: wrap;
+  }
+}
+
+/* Tablet (768px – 1023px) — перенос */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .filters {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile (≤ 767px) — горизонтальный скролл */
+@media (max-width: 767px) {
   .filters {
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding-bottom: 6px;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .filter {
+    flex-shrink: 0;
   }
 }
 
@@ -24,7 +48,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 11px;
+  padding: 6px 8px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: transparent;
@@ -56,19 +80,4 @@
   height: 20px;
   font-size: 14px;
   display: inline-block;
-}
-
-/* Мобильная версия фильтров — скролл */
-@media (max-width: 1023px) {
-  .filters {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .filter {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 }

@@ -1,24 +1,23 @@
 /* ===== ПОДПИСКА ===== */
 
 .subscribe {
-  width: 486px;
-  margin-left: 30px;
+  width: calc(450px + (486px - 450px) * ((100vw - 1023px) / (1440px - 1023px)));
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .subscribe__title {
   font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 1.2px;
+  font-size: 18px;
   line-height: 26px;
   margin-bottom: 16px;
   width: 356px;
-  color: #ffffff;
 }
 
 .subscribe__form {
   display: flex;
   align-items: center;
-  width: 380px;
+  width: 356px;
   height: 48px;
   background: #ffffff;
   border: none;
@@ -85,8 +84,8 @@
   letter-spacing: 0.3px;
   color: var(--footer-text-muted);
   opacity: 0.7;
-  width: 486px;
-  height: 54px;
+  width: 100%;
+  max-width: 486px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   text-align: justify;
@@ -102,48 +101,31 @@
   border-bottom-style: solid;
 }
 
-/* ✅ Адаптив */
-@media (max-width: 1024px) {
+/* Планшет (768px – 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .subscribe {
+    width: clamp(374px, 50vw, 450px);
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+/* Мобильный (≤ 414px) */
+@media (max-width: 414px) {
   .subscribe {
     width: 100%;
-    max-width: 486px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .subscribe__form {
+    width: 100%;
+    max-width: 384px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .subscribe__title,
-  .subscribe__form,
   .subscribe__agreement {
     width: 100%;
-    max-width: 394px;
-  }
-}
-
-@media (max-width: 768px) {
-  .subscribe {
-    text-align: center;
-  }
-
-  .subscribe__form {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .subscribe__input {
-    width: 100%;
-    height: 48px;
-    border-radius: 4px;
-    border: 1px solid rgba(157, 157, 157, 0.2);
-    margin-bottom: 8px;
-  }
-
-  .subscribe__button {
-    width: 100%;
-    height: 48px;
-  }
-
-  .subscribe__agreement {
-    height: auto;
-    min-height: 54px;
   }
 }

@@ -1,7 +1,7 @@
 /* ===== АДАПТИВНОСТЬ ===== */
 
 /* Планшеты и мобильные — показываем бургер, скрываем навигацию */
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .nav,
   .header__button {
     display: none;
@@ -12,7 +12,7 @@
 }
 
 /* Десктоп — скрываем мобильное меню */
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .mobile-menu {
     display: none !important;
   }

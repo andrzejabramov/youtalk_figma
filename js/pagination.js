@@ -1,16 +1,19 @@
 // js/pagination.js
 const Pagination = (function () {
+  function getMaxCardsPerPage() {
+    const width = window.innerWidth;
+    if (width <= 767) return 4;
+    return 9;
+  }
+
   const CONFIG = {
-    MAX_CARDS_PER_PAGE: 9,
+    get MAX_CARDS_PER_PAGE() {
+      return getMaxCardsPerPage();
+    },
     GAP: 24,
     CONTAINER_WIDTH: 1200,
   };
 
-  /**
-   * Расчет сетки по алгоритму:
-   * - Количество рядов = ceil(карточки / 3)
-   * - Распределение зависит от остатка от деления на 3
-   */
   function calculateGrid(totalCards) {
     const n = Math.min(totalCards, CONFIG.MAX_CARDS_PER_PAGE);
 
@@ -40,29 +43,8 @@ const Pagination = (function () {
     return grid;
   }
 
-  /**
-   * Определяет, должна ли карточка с данным индексом быть широкой
-   */
-  function isCardLarge(cardIndex, grid) {
-    if (!grid || grid.length === 0) return false;
-
-    let currentIndex = 0;
-    for (let row = 0; row < grid.length; row++) {
-      const cardsInRow = grid[row];
-      const rowStart = currentIndex;
-      const rowEnd = currentIndex + cardsInRow;
-
-      if (cardIndex >= rowStart && cardIndex < rowEnd) {
-        return cardsInRow === 2;
-      }
-      currentIndex = rowEnd;
-    }
-    return false;
-  }
-
   return {
     calculateGrid,
-    isCardLarge,
     CONFIG,
   };
 })();

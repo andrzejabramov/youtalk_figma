@@ -12,3 +12,14 @@
   height: 3px;
   background: var(--color-text);
 }
+
+/* Tablet (768px – 1023px) — бургер, скрываем навигацию */
+@media (max-width: 1023px) {
+  .nav,
+  .header__button {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}

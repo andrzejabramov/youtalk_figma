@@ -2,16 +2,17 @@
 
 .nav__list {
   display: flex;
-  gap: 30px;
+  gap: clamp(15px, 3vw, 30px); /* ✅ гибкий gap: от 15px до 30px */
   list-style: none;
 }
 
 .nav__link {
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px); /* ✅ гибкий шрифт: от 12px до 14px */
   line-height: 16px;
   color: var(--color-text);
+  white-space: nowrap; /* ✅ запрещаем перенос текста */
 }
 
 .nav__item--dropdown {
@@ -27,4 +28,15 @@
   border-bottom: 1.5px solid var(--color-text);
   transform: rotate(45deg);
   margin-top: -3px;
+}
+
+/* Tablet (768px – 1023px) — бургер, скрываем навигацию */
+@media (max-width: 1023px) {
+  .nav,
+  .header__button {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
 }

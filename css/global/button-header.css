@@ -4,6 +4,9 @@
   background: var(--color-primary-light);
   color: var(--color-primary-dark);
   transition: all 0.3s;
+  padding: clamp(10px, 2vw, 14px) clamp(15px, 3vw, 20px); /* ✅ гибкие отступы */
+  font-size: clamp(12px, 2vw, 14px); /* ✅ гибкий шрифт */
+  white-space: nowrap; /* ✅ текст не переносится */
 }
 
 .button--secondary:hover {
